@@ -1,0 +1,68 @@
+@import "globals";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+
+.nav-header {
+  // Style for Rectangle 1
+  @include opacity(0.8);
+  width: 962px;
+  height: 111px;
+  background-color: #1B1B1B;
+  @include box-shadow(0 0 31px rgba(0, 0, 1, 0.69));
+
+  // fonts
+  color: #FFF;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  .subnav {
+    // Style for "Contact"
+    color: #AEAEAE;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 11px;
+  }
+
+  .logo {
+    background: image-url("guardiant_logo_horizontal_white.png");
+    width: image-width("guardiant_logo_horizontal_white.png");
+    height: image-height("guardiant_logo_horizontal_white.png");
+
+  }
+}
+
+
+.footer {
+  // Style for BOTTOM BAR
+  width: $CONTENT_WIDTH;
+  //height: 777px;
+  background-color: #232323;
+
+  .action {
+
+    &.phone {
+      // Style for "1-432-563-LUBE"
+      color: #B9B9B9;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    // Style for "1200 “B” West "
+    color: #B9B9B9;
+    font-family: "Georgia";
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+  .copyright {
+    // Style for "All trademark "
+    color: #525252;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,186 @@
+@import "global";
+
+.slideshow {
+
+  .caption {
+    // Style for Rectangle 3
+    @include opacity(0.8);
+    width: 527px;
+    height: 177px;
+    background-color: #000;
+
+    h3 {
+      // Style for "Now Shipping R"
+      color: #E9E9E9;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    h4 {
+      // Style for "Full stock of "
+      color: #E9E9E9;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    p {
+      // Style for "Guardiant ship"
+      color: #E9E9E9;
+      font-family: "Georgia";
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+  }
+
+}
+.two-column {
+
+  .column {
+
+    width: ($CONTENT_WIDTH / 2) - $TWO_COLUMN_MARGIN;
+
+    h2 {
+      // Style for "WHO WE ARE"
+      color: #001345;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    p {
+      // Style for "Guardiant Lubr"
+      color: #737373;
+      font-family: "Georgia";
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+}
+
+.quote-container {
+
+  p{
+
+    &.quote {
+      // Style for "Guardiant was "
+      color: #737373;
+      font-family: "Georgia";
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &.attribution {
+      // Style for "Rick Shoop, Ph"
+      color: #4A4A4A;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.creto-container {
+  background-color: #102239;
+  color: #ffffff;
+
+  .title {
+    // Style for "Our Leadership"
+    color: #FFF;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .divider {
+    // Style for Shape 39
+    width: -1px;
+    border: 1px solid #004168;
+
+    //margin-left: -22px;
+  }
+
+  .meaning {
+    //margin-left: 296px;
+    // Base style
+    color: #FFF;
+    font-family: "Georgia";
+    font-weight: 400;
+
+    // Style for "The leadership"
+    font-size: 18px;
+
+    // Style for " "
+    font-size: 24px;
+  }
+}
+
+
+.sections-container {
+
+  .section {
+
+    // Style for "Spare Parts"
+    color: #FFF;
+    font-family: "Georgia";
+    font-size: 24px;
+    font-weight: 400;
+
+    .inactive {
+      // Style for Shape 39 copy
+      height: 2px;
+      background-color: #004168;
+    }
+
+    .active {
+      // Style for Shape 39 copy 4
+      height: 2px;
+      background-color: #102239;
+    }
+
+    .copy {
+      // Style for "Phasellus maur"
+      color: #FFF;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 11px;
+      width: 226px;
+
+    }
+  }
+}
+
+.help-container {
+
+  h2 {
+    // Style for "How can we hel"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  p {
+    // Base style
+    color: #737373;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+  }
+
+  .button {
+    // Style for Rounded Rectangle 4
+    width: 207px;
+    height: 27px;
+    border: 1px solid #102239;
+    @include border-radius(8px);
+    // Style for "Contact us"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

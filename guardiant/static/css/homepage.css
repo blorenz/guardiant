@@ -1,0 +1,200 @@
+/* line 7, ../sass/_global.scss */
+.nav-header {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  width: 962px;
+  height: 111px;
+  background-color: #1B1B1B;
+  -webkit-box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  -moz-box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  color: #FFF;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 22, ../sass/_global.scss */
+.nav-header .subnav {
+  color: #AEAEAE;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 11px;
+}
+/* line 29, ../sass/_global.scss */
+.nav-header .logo {
+  background: url('/img/guardiant_logo_horizontal_white.png?1409607068');
+  width: 238px;
+  height: 39px;
+}
+
+/* line 38, ../sass/_global.scss */
+.footer {
+  width: 960px;
+  background-color: #232323;
+}
+/* line 44, ../sass/_global.scss */
+.footer .action {
+  color: #B9B9B9;
+  font-family: "Georgia";
+  font-size: 12px;
+  font-weight: 400;
+}
+/* line 46, ../sass/_global.scss */
+.footer .action.phone {
+  color: #B9B9B9;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 12px;
+  font-weight: 500;
+}
+/* line 62, ../sass/_global.scss */
+.footer .copyright {
+  color: #525252;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 10px;
+}
+
+/* line 5, ../sass/homepage.scss */
+.slideshow .caption {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  width: 527px;
+  height: 177px;
+  background-color: #000;
+}
+/* line 12, ../sass/homepage.scss */
+.slideshow .caption h3 {
+  color: #E9E9E9;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 27px;
+  font-weight: 700;
+}
+/* line 20, ../sass/homepage.scss */
+.slideshow .caption h4 {
+  color: #E9E9E9;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 18px;
+  font-style: italic;
+}
+/* line 28, ../sass/homepage.scss */
+.slideshow .caption p {
+  color: #E9E9E9;
+  font-family: "Georgia";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 41, ../sass/homepage.scss */
+.two-column .column {
+  width: 460px;
+}
+/* line 45, ../sass/homepage.scss */
+.two-column .column h2 {
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 30px;
+  font-weight: 700;
+}
+/* line 53, ../sass/homepage.scss */
+.two-column .column p {
+  color: #737373;
+  font-family: "Georgia";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 68, ../sass/homepage.scss */
+.quote-container p.quote {
+  color: #737373;
+  font-family: "Georgia";
+  font-size: 18px;
+  font-weight: 400;
+}
+/* line 76, ../sass/homepage.scss */
+.quote-container p.attribution {
+  color: #4A4A4A;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 87, ../sass/homepage.scss */
+.creto-container {
+  background-color: #102239;
+  color: #ffffff;
+}
+/* line 91, ../sass/homepage.scss */
+.creto-container .title {
+  color: #FFF;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 18px;
+  font-weight: 700;
+}
+/* line 99, ../sass/homepage.scss */
+.creto-container .divider {
+  width: -1px;
+  border: 1px solid #004168;
+}
+/* line 107, ../sass/homepage.scss */
+.creto-container .meaning {
+  color: #FFF;
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 24px;
+}
+
+/* line 125, ../sass/homepage.scss */
+.sections-container .section {
+  color: #FFF;
+  font-family: "Georgia";
+  font-size: 24px;
+  font-weight: 400;
+}
+/* line 133, ../sass/homepage.scss */
+.sections-container .section .inactive {
+  height: 2px;
+  background-color: #004168;
+}
+/* line 139, ../sass/homepage.scss */
+.sections-container .section .active {
+  height: 2px;
+  background-color: #102239;
+}
+/* line 145, ../sass/homepage.scss */
+.sections-container .section .copy {
+  color: #FFF;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 11px;
+  width: 226px;
+}
+
+/* line 158, ../sass/homepage.scss */
+.help-container h2 {
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 36px;
+  font-weight: 700;
+}
+/* line 166, ../sass/homepage.scss */
+.help-container p {
+  color: #737373;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 18px;
+}
+/* line 173, ../sass/homepage.scss */
+.help-container .button {
+  width: 207px;
+  height: 27px;
+  border: 1px solid #102239;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
