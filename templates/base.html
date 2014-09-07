@@ -1,0 +1,55 @@
+{% load cms_tags sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% page_attribute "page_title" %}</title>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+    {% render_block "css" %}
+    {% block page_css %}{% endblock %}
+</head>
+<body>
+{% cms_toolbar %}
+<div id="site-container">
+    <nav class="nav-header">
+        <div id="guardiant-logo"></div>
+
+        <ul class="subnav">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Distributors</a></li>
+        </ul>
+
+        <div id="main-nav">
+            <ul>
+                {% show_menu 0 100 100 100 %}
+            </ul>
+        </div>
+    </nav>
+
+    {% placeholder base_content %}
+    {% block base_content %}{% endblock %}
+
+    <footer class="footer">
+        <ul id="footer-actions">
+            <li class="action"></li>
+            <li class="action"></li>
+            <li class="action"></li>
+        </ul>
+
+        <ul id="footer-shares">
+            <li class="facebook"></li>
+            <li class="linkedin"></li>
+            <li class="vimeo"></li>
+            <li class="youtube"></li>
+        </ul>
+
+        <p class="copyright">
+            All trademark names:<br/>
+            Graco, Trabon, Lubriquip, Manzel, Lincoln, DropsA, Premier Progressive, SB, Ajax, Ariel, Chicago Pneumatic, Energy Indus  tries, Ingersoll Rand, Dresser Rand, Gemini, White Superior Worthington Cub, Cooper Bessemer & Clark are the property of their respective companies and not associated with Guartiant Technologies LLC.
+        </p>
+    </footer>
+    {% render_block "js" %}
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% load thumbnail %}
+{% load guardiant_utils %}
+
+<div class="gallery slideshow" id="grid">
+
+    <ul id="grid-choices">
+        {% for image in images %}
+            <li class="section" data-order="{{ forloop.counter }}">
+{#                <img src="{% thumbnail image.src 960x536 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />#}
+                        <span class="ibhelper"></span>
+                        <span class="title">{{ image.title }}</span>
+{#            {{ image.extended_content|safe }}#}
+            </li>
+        {% endfor %}
+
+
+    </ul>
+
+</div>

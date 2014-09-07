@@ -1,0 +1,53 @@
+{% load thumbnail %}
+{% load guardiant_utils %}
+
+<div class="gallery" id="slideshow">
+
+    <div id="slides">
+        {% for image in images %}
+            <div class="slide" data-order="{{ forloop.counter }}">
+                <img src="{% thumbnail image.src 790x391 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />
+
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="slideshow-nav">
+        <ul class="lozenge">
+            {% for image in images %}
+                <li>
+                    <a href="#cmspluginGalleryImage{{ image.pk }}" data-order="{{ forloop.counter }}" {% if forloop.counter0 == 0 %}class="active"{% endif %}></a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="title"></div>
+
+        <div class="nav-bg"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var w = $('.lozenge').width();
+    $('.lozenge').css('width',w).css('margin-left',w/2*-1);
+    $("#slides > div:gt(0)").hide();
+    var $firstSlide = $('#slides > div:first');
+    $('.slideshow-nav .title').html($('img', $firstSlide).attr('title'));
+
+    setInterval(function() {
+        var $nextSlide = $('#slides > div:first')
+                .fadeOut({%  multiply gallery.fade_time 1000 %})
+                .next();
+            $('.lozenge a.active').removeClass('active');
+            var order = $nextSlide.data('order');
+
+
+            $('.lozenge a[data-order=' + order+']').addClass('active');
+            $('.slideshow-nav .title').html($('img', $nextSlide).attr('title'));
+
+            $nextSlide.fadeIn({%  multiply gallery.fade_time 1000 %})
+                .end()
+                .appendTo('#slides');
+
+    },  {%  multiply gallery.slide_duration 1000 %});
+</script>

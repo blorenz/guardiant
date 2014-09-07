@@ -62,3 +62,108 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* line 6, ../sass/_global.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 9, ../sass/_global.scss */
+body * {
+  box-sizing: border-box;
+}
+
+/* line 13, ../sass/_global.scss */
+#site-container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 19, ../sass/_global.scss */
+.nav-header {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  width: 960px;
+  height: 111px;
+  background-color: #1B1B1B;
+  -webkit-box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  -moz-box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  box-shadow: 0 0 31px rgba(0, 0, 1, 0.69);
+  position: absolute;
+  z-index: 1000;
+}
+/* line 30, ../sass/_global.scss */
+.nav-header #main-nav {
+  clear: both;
+  float: right;
+  margin-top: 38px;
+  margin-right: 35px;
+}
+/* line 37, ../sass/_global.scss */
+.nav-header #main-nav li {
+  display: inline-block;
+  min-width: 70px;
+  text-align: center;
+}
+/* line 42, ../sass/_global.scss */
+.nav-header #main-nav li a {
+  color: #FFF;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* line 53, ../sass/_global.scss */
+.nav-header .subnav {
+  float: right;
+  margin-top: 17px;
+}
+/* line 58, ../sass/_global.scss */
+.nav-header .subnav li {
+  display: inline-block;
+  margin-right: 34px;
+}
+/* line 63, ../sass/_global.scss */
+.nav-header .subnav li a, .nav-header .subnav li a:visited {
+  color: #AEAEAE;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 11px;
+  text-decoration: none;
+}
+/* line 72, ../sass/_global.scss */
+.nav-header #guardiant-logo {
+  background: url('../img/guardiant_logo_horizontal_white.png?1409607068');
+  width: 238px;
+  height: 39px;
+  position: absolute;
+  top: 49px;
+  left: 29px;
+}
+
+/* line 84, ../sass/_global.scss */
+.footer {
+  width: 960px;
+  background-color: #232323;
+}
+/* line 90, ../sass/_global.scss */
+.footer .action {
+  color: #B9B9B9;
+  font-family: "Georgia";
+  font-size: 12px;
+  font-weight: 400;
+}
+/* line 92, ../sass/_global.scss */
+.footer .action.phone {
+  color: #B9B9B9;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 12px;
+  font-weight: 500;
+}
+/* line 108, ../sass/_global.scss */
+.footer .copyright {
+  color: #525252;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 10px;
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage.css"/>
+{% endblock %}
+
+{% block base_content %}
+    <div id="homepage-slideshow">
+        {% placeholder slideshow_content %}
+    </div>
+
+    <div class="two-column">
+        {% placeholder mission_content %}
+    </div>
+
+    {% placeholder quote_content %}
+
+    <div class="creto-container">
+        {% placeholder creto_content %}
+    </div>
+
+    <div class="sections-container">
+        {% placeholder grid_content %}
+    </div>
+
+    <div class="help-container">
+        {% placeholder help_content %}
+    </div>
+{% endblock %}

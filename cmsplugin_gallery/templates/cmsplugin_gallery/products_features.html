@@ -1,0 +1,86 @@
+{% load thumbnail %}
+{% load braner_utils %}
+
+
+
+<div id="slideshow-wrapper">
+    <div class="gallery" id="slideshow">
+
+        <div id="slides">
+            {% for image in images %}
+                <div class="slide" data-order="{{ forloop.counter }}" data-id="#cmspluginGalleryImage{{ image.pk }}">
+                    <img src="{% thumbnail image.src 790x391 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />
+
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="slideshow-nav">
+            <ul class="lozenge">
+                {% for image in images %}
+                    <li>
+                        <a href="#cmspluginGalleryImage{{ image.pk }}"  data-href="#cmspluginGalleryImage{{ image.pk }}" data-order="{{ forloop.counter }}" {% if forloop.counter0 == 0 %}class="active"{% endif %}></a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="title"></div>
+
+            <div class="nav-bg"></div>
+        </div>
+    </div>
+</div>
+
+
+<hr/>
+<h3>Features</h3>
+
+<ul id="features">
+{% for image in images %}
+    <li class="feature">
+        <a href="#main-nav" data-href="#cmspluginGalleryImage{{ image.pk }}"><h3>{{ image.title }} <span>{{ image.extended_content|safe }}</span></h3></a>
+    </li>
+{% endfor %}
+</ul>
+
+<script type="text/javascript">
+    var w = $('.lozenge').width();
+    $('.lozenge').css('width',w).css('margin-left',w/2*-1);
+
+    $("#slides > div:gt(0)").hide();
+    var $firstSlide = $('#slides > div:first');
+    $('.slideshow-nav .title').html($('img', $firstSlide).attr('title'));
+
+
+
+    $('.slideshow-nav a, .feature a').on('click', function(e) {
+        {#        e.preventDefault();#}
+        $('.focused').removeClass('focused');
+        $(e.currentTarget).addClass('focused');
+        var href = $(e.currentTarget).attr('data-href');
+
+        var $slide = $('div[data-id=' + href +']')
+                .detach();
+
+        var $topSlide = $('#slides > div:first')
+                .after($slide)
+                .fadeOut({%  multiply gallery.fade_time 1000 %})
+                .detach();
+
+        $topSlide.appendTo('#slides');
+
+        $('.lozenge a.active').removeClass('active');
+        var order = $slide.data('order');
+
+
+        $('.lozenge a[data-order=' + order+']').addClass('active');
+        $('.slideshow-nav .title').html($('img', $slide).attr('title'));
+
+        $slide.fadeIn({%  multiply gallery.fade_time 1000 %});
+
+
+    });
+
+</script>
+
+

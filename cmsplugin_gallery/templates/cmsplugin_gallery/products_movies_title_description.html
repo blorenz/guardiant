@@ -1,0 +1,11 @@
+{% load thumbnail %}
+{% load braner_utils %}
+
+
+
+{% for image in images %}
+    <div class="product" data-order="{{ forloop.counter }}">
+        <img src="{% thumbnail image.src 240x240 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />
+    </div>
+{% endfor %}
+

@@ -1,127 +1,195 @@
-@import "global";
+@import "globals";
+@import "slideshow";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
 
 .slideshow {
 
-  .caption {
-    // Style for Rectangle 3
-    @include opacity(0.8);
-    width: 527px;
-    height: 177px;
-    background-color: #000;
+  width: $CONTENT_WIDTH;
 
-    h3 {
-      // Style for "Now Shipping R"
-      color: #E9E9E9;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 27px;
-      font-weight: 700;
+  .slide {
+    position: relative;
+    .caption {
+      // Style for Rectangle 3
+      @include opacity(0.8);
+      width: 527px;
+      height: 177px;
+      background-color: #000;
+      position: absolute;
+      z-index: 100;
+      bottom: 30px;
+      left: 0;
+      padding: 20px;
+
+      h3 {
+        // Style for "Now Shipping R"
+        color: #E9E9E9;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 27px;
+        font-weight: 700;
+
+      }
+
+      h4 {
+        // Style for "Full stock of "
+        color: #E9E9E9;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 18px;
+        font-style: italic;
+      }
+
+      p {
+        // Style for "Guardiant ship"
+        color: #E9E9E9;
+        font-family: "Georgia";
+        font-size: 14px;
+        font-weight: 400;
+      }
+
     }
-
-    h4 {
-      // Style for "Full stock of "
-      color: #E9E9E9;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 18px;
-      font-style: italic;
-    }
-
-    p {
-      // Style for "Guardiant ship"
-      color: #E9E9E9;
-      font-family: "Georgia";
-      font-size: 14px;
-      font-weight: 400;
-    }
-
   }
 
 }
 .two-column {
-
+  margin: 40px auto 0;
   .column {
+    display: inline-block;
+    vertical-align: top;
 
     width: ($CONTENT_WIDTH / 2) - $TWO_COLUMN_MARGIN;
+    ul {
+      width: 80%;
+      line-height: 24px;
+      letter-spacing: .3px;
+      h2 {
+        // Style for "WHO WE ARE"
+        color: #001345;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
 
-    h2 {
-      // Style for "WHO WE ARE"
-      color: #001345;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 30px;
-      font-weight: 700;
+      p {
+        // Style for "Guardiant Lubr"
+        color: #737373;
+        font-family: "Georgia";
+        font-size: 14px;
+        font-weight: 400;
+      }
     }
 
-    p {
-      // Style for "Guardiant Lubr"
-      color: #737373;
-      font-family: "Georgia";
-      font-size: 14px;
-      font-weight: 400;
-    }
   }
 
 }
 
 .quote-container {
 
-  p{
+    position: relative;
 
-    &.quote {
-      // Style for "Guardiant was "
-      color: #737373;
-      font-family: "Georgia";
-      font-size: 18px;
-      font-weight: 400;
+    .slide {
+      height: 388px;
+    }
+    .caption {
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      p {
+        // Style for "Guardiant was "
+        color: #737373;
+        font-family: "Georgia";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 36px;
+        width: 547px;
+      }
+
+      h5 {
+        // Style for "Rick Shoop, Ph"
+        color: #4A4A4A;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 50px;
+        
+      }
     }
 
-    &.attribution {
-      // Style for "Rick Shoop, Ph"
-      color: #4A4A4A;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-  }
+
 }
 
 .creto-container {
   background-color: #102239;
   color: #ffffff;
+  padding: 63px 15px 63px 15px;
+  border-top: 3px solid  #004168;
+  border-bottom: 3px solid  #004168;
 
-  .title {
-    // Style for "Our Leadership"
-    color: #FFF;
-    font-family: "Helvetica Neue LT Std";
-    font-size: 18px;
-    font-weight: 700;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+
+
+    &.title {
+      // Style for "Our Leadership"
+      color: #FFF;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 18px;
+      font-weight: 700;
+      width: 139px + 83;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+//    &.divider {
+//      // Style for Shape 39
+//      width: 1px;
+//
+//      span {
+//        visibility: hidden;
+//        display: block;
+//        width: 580px - 22;
+//
+//      }
+//
+//      //margin-left: -22px;
+//
+//    }
+
+    &.meaning {
+      //margin-left: 296px;
+      // Base style
+      color: #FFF;
+      font-family: "Georgia";
+      font-weight: 400;
+
+      // Style for "The leadership"
+      font-size: 18px;
+      line-height: 30px;
+
+      // Style for " "
+      width: 580px;
+      padding-left: 22px;
+      border-left: 1px solid #004168;
+
+    }
+
   }
 
-  .divider {
-    // Style for Shape 39
-    width: -1px;
-    border: 1px solid #004168;
-
-    //margin-left: -22px;
-  }
-
-  .meaning {
-    //margin-left: 296px;
-    // Base style
-    color: #FFF;
-    font-family: "Georgia";
-    font-weight: 400;
-
-    // Style for "The leadership"
-    font-size: 18px;
-
-    // Style for " "
-    font-size: 24px;
-  }
 }
 
+.ibhelper {
+    height: 100%;
+    display: inline-block;
+}
 
 .sections-container {
 
+  #grid-choices {
+    display: inline-block;
+  }
   .section {
 
     // Style for "Spare Parts"
@@ -129,20 +197,37 @@
     font-family: "Georgia";
     font-size: 24px;
     font-weight: 400;
+    background-color: #191919;
+    display: inline-block;
+    width: 320px;
+    height: 179px;
+    vertical-align: bottom;
+    padding-bottom: 30px;
+    padding-left: 43px;
+    float: left;
 
-    .inactive {
-      // Style for Shape 39 copy
-      height: 2px;
-      background-color: #004168;
+
+
+      span.title {
+        border-bottom: 2px solid #004168;
+        padding-bottom: 5px;
+        color: #FFF;
+        font-family: "Georgia";
+        font-size: 24px;
+        font-weight: 400;
+
+
+      }
+
+    &.active {
+        span.title {
+          border-bottom: 2px solid #102239;
+          padding-bottom: 10px;
+
+        }
     }
 
-    .active {
-      // Style for Shape 39 copy 4
-      height: 2px;
-      background-color: #102239;
-    }
-
-    .copy {
+    p {
       // Style for "Phasellus maur"
       color: #FFF;
       font-family: "Helvetica Neue LT Std";
@@ -155,12 +240,26 @@
 
 .help-container {
 
+  padding-top: 71px;
+
+  .left-column {
+    display: inline-block;
+  }
+
+  .right-column {
+    display: inline-block;
+    padding-left: 75px;
+    vertical-align: top;
+    padding-top: 27px;
+  }
+
   h2 {
     // Style for "How can we hel"
     color: #001345;
     font-family: "Helvetica Neue LT Std";
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 22px;
   }
 
   p {
@@ -168,6 +267,9 @@
     color: #737373;
     font-family: "Helvetica Neue LT Std";
     font-size: 18px;
+    width: 568px;
+    line-height: 28px;
+    margin-bottom: 30px;
   }
 
   .button {
@@ -182,5 +284,29 @@
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
+  }
+
+  a {
+    display: block;
+    // Style for Rounded Rectangle 4
+    width: 207px;
+    height: 27px;
+    border: 1px solid #102239;
+    @include border-radius(8px);
+
+    // Style for "Contact us"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 27px;
+    text-decoration: none;
+    margin-bottom: 21px;
+
+    &:visited {
+      color: #001345;
+    }
   }
 }

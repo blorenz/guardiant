@@ -1,0 +1,178 @@
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+@import "compass/css3/background-clip";
+
+#homepage-slideshow {
+  width: $CONTENT_WIDTH;
+  margin: 0px auto;
+//  border: 1px solid #c6cbd0;
+//  padding: 5px;
+
+  #slideshow {
+    width: $CONTENT_WIDTH;
+    height: 536px;
+    //margin: 50px auto;
+    position: relative;
+    //padding: 10px;
+    //box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+    .slide {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+
+    i {
+      display: none;
+    }
+
+
+    #slides.hovering {
+
+      i {
+        display: block;
+        &.fa-backward,
+        &.fa-forward,
+        &.fa-pause {
+          position: absolute;
+          z-index: 1000;
+          width: 50px;
+          height: 50px;
+          color: #a2a2a2;
+          top: 40%;
+
+
+        }
+
+        &.fa-backward {
+          left: 2%;
+          &:hover {
+            color: white;
+          }
+
+
+        }
+
+        &.fa-pause {
+          left: 47%;
+          color: #a2a2a2;
+
+          &.paused {
+            color: white;
+          }
+        }
+
+        &.fa-forward {
+          right: 2%;
+          &:hover {
+            color: white;
+          }
+        }
+
+      }
+
+
+    }
+
+
+  }
+}
+
+
+.slideshow-nav {
+  width: 100%;
+  bottom: 0px;
+  height: 29px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+
+  .nav-bg {
+    @include opacity(.65); // layer alpha
+    background-color: #363636; // layer fill content
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index:2000;
+  }
+
+  .title {
+    position: absolute;
+    z-index: 4000;
+    bottom: 0px;
+    left: 0px;
+    color: #fff; // text color
+    font-family: "Arial";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    text-indent: 8px;
+  }
+
+  .lozenge {
+    margin: 0 auto;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    //@include opacity(.75); // layer alpha
+    @include border-radius(7px); // border radius
+    @include background-clip(padding-box); // prevents bg color from leaking outside the border
+    background-color: #000; // layer fill content
+    display: inline-block;
+    padding: 0 2px;
+    z-index:3000;
+
+    li {
+      float: left;
+    }
+    a {
+      float: left;
+      background: image-url("grey-dot.png") no-repeat;
+      width: 7px;
+      height: 7px;
+      margin: 3px 2px;
+
+      &.active {
+        background: image-url("green-dot.png") no-repeat;
+      }
+    }
+  }
+}
+
+
+/// Product Features
+
+#product-features {
+  #slideshow-wrapper {
+    width: 790px;
+    margin: 30px auto;
+    border: 1px solid #c6cbd0;
+    padding: 5px;
+
+    #slideshow {
+      width: 790px;
+      height: 391px;
+      //margin: 50px auto;
+      position: relative;
+      //padding: 10px;
+      //box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+      .slide {
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+      }
+
+
+    }
+  }
+}

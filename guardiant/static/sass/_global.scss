@@ -3,33 +3,79 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+body * {
+  box-sizing: border-box;
+}
+
+#site-container {
+  width: $CONTENT_WIDTH;
+  margin: 0 auto;
+  position: relative;
+}
 
 .nav-header {
   // Style for Rectangle 1
   @include opacity(0.8);
-  width: 962px;
+  width: $CONTENT_WIDTH;
   height: 111px;
   background-color: #1B1B1B;
   @include box-shadow(0 0 31px rgba(0, 0, 1, 0.69));
+  position: absolute;
+  z-index: 1000;
 
-  // fonts
-  color: #FFF;
-  font-family: "Helvetica Neue LT Std";
-  font-size: 13px;
-  font-weight: 300;
-  text-transform: uppercase;
+
+  #main-nav {
+    // fonts
+    clear:both;
+    float:right;
+    margin-top: 38px;
+    margin-right: 35px;
+
+    li {
+      display: inline-block;
+      min-width: 70px;
+      text-align: center;
+
+      a {
+        color: #FFF;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 13px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
 
   .subnav {
     // Style for "Contact"
-    color: #AEAEAE;
-    font-family: "Helvetica Neue LT Std";
-    font-size: 11px;
+    float: right;
+    margin-top: 17px;
+
+    li {
+      display: inline-block;
+      margin-right: 34px;
+
+
+      a, a:visited {
+        color: #AEAEAE;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 11px;
+        text-decoration: none;
+      }
+    }
   }
 
-  .logo {
+  #guardiant-logo {
     background: image-url("guardiant_logo_horizontal_white.png");
     width: image-width("guardiant_logo_horizontal_white.png");
     height: image-height("guardiant_logo_horizontal_white.png");
+    position: absolute;
+    top: 49px;
+    left: 29px;
 
   }
 }

@@ -1,0 +1,14 @@
+{% load thumbnail %}
+{% load braner_utils %}
+
+
+
+{% for image in images %}
+    <li class="product" data-order="{{ forloop.counter }}">
+        <img src="{% thumbnail image.src 548x411 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />
+        <h3>{{ image.title|safe  }}</h3>
+        <p>{{ image.extended_content|safe }}</p>
+    </li>
+{% endfor %}
+
+
