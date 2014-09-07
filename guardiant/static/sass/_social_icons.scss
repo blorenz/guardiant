@@ -1,0 +1,47 @@
+@import "compass/utilities/sprites";
+@import "social_icons/*.png";
+
+a {
+  display: block;
+  width: image-width("social_icons/facebook-off.png");
+  height: image-height("social_icons/facebook-off.png");
+}
+.facebook {
+  a {
+    @include social_icons-sprite(facebook-off);
+
+    &:hover {
+      @include social_icons-sprite(facebook-on);
+    }
+  }
+}
+
+.vimeo {
+  a {
+    @include social_icons-sprite(vimeo-off);
+
+    &:hover {
+      @include social_icons-sprite(vimeo-on);
+    }
+  }
+}
+
+.linkedin {
+  a {
+    @include social_icons-sprite(linkedin-off);
+
+    &:hover {
+      @include social_icons-sprite(linkedin-on);
+    }
+  }
+}
+
+.youtube {
+  a {
+    @include social_icons-sprite(youtube-off);
+
+    &:hover {
+      @include social_icons-sprite(youtube-on);
+    }
+  }
+}

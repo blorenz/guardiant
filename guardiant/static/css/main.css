@@ -66,21 +66,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 6, ../sass/_global.scss */
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: #454545;
 }
 
-/* line 9, ../sass/_global.scss */
+/* line 10, ../sass/_global.scss */
 body * {
   box-sizing: border-box;
 }
 
-/* line 13, ../sass/_global.scss */
+/* line 14, ../sass/_global.scss */
 #site-container {
   width: 960px;
   margin: 0 auto;
   position: relative;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 0 101px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 101px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 101px rgba(0, 0, 0, 0.5);
 }
 
-/* line 19, ../sass/_global.scss */
+/* line 23, ../sass/_global.scss */
 .nav-header {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -93,20 +98,20 @@ body * {
   position: absolute;
   z-index: 1000;
 }
-/* line 30, ../sass/_global.scss */
+/* line 34, ../sass/_global.scss */
 .nav-header #main-nav {
   clear: both;
   float: right;
   margin-top: 38px;
   margin-right: 35px;
 }
-/* line 37, ../sass/_global.scss */
+/* line 41, ../sass/_global.scss */
 .nav-header #main-nav li {
   display: inline-block;
   min-width: 70px;
   text-align: center;
 }
-/* line 42, ../sass/_global.scss */
+/* line 46, ../sass/_global.scss */
 .nav-header #main-nav li a {
   color: #FFF;
   font-family: "Helvetica Neue LT Std";
@@ -115,24 +120,24 @@ body * {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 53, ../sass/_global.scss */
+/* line 57, ../sass/_global.scss */
 .nav-header .subnav {
   float: right;
   margin-top: 17px;
 }
-/* line 58, ../sass/_global.scss */
+/* line 62, ../sass/_global.scss */
 .nav-header .subnav li {
   display: inline-block;
   margin-right: 34px;
 }
-/* line 63, ../sass/_global.scss */
+/* line 67, ../sass/_global.scss */
 .nav-header .subnav li a, .nav-header .subnav li a:visited {
   color: #AEAEAE;
   font-family: "Helvetica Neue LT Std";
   font-size: 11px;
   text-decoration: none;
 }
-/* line 72, ../sass/_global.scss */
+/* line 76, ../sass/_global.scss */
 .nav-header #guardiant-logo {
   background: url('../img/guardiant_logo_horizontal_white.png?1409607068');
   width: 238px;
@@ -142,28 +147,182 @@ body * {
   left: 29px;
 }
 
-/* line 84, ../sass/_global.scss */
+/* line 88, ../sass/_global.scss */
 .footer {
   width: 960px;
   background-color: #232323;
+  padding-top: 53px;
 }
-/* line 90, ../sass/_global.scss */
-.footer .action {
-  color: #B9B9B9;
-  font-family: "Georgia";
-  font-size: 12px;
-  font-weight: 400;
+/* line 95, ../sass/_global.scss */
+.footer #footer-actions {
+  margin: 0 auto 40px;
+  text-align: center;
 }
-/* line 92, ../sass/_global.scss */
-.footer .action.phone {
+/* line 98, ../sass/_global.scss */
+.footer #footer-actions .action {
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+  vertical-align: top;
+  margin-left: 90px;
+}
+/* line 104, ../sass/_global.scss */
+.footer #footer-actions .action:first-child {
+  margin-left: 0px;
+}
+/* line 108, ../sass/_global.scss */
+.footer #footer-actions .action img {
+  display: block;
+  margin: 0 auto 21px;
+}
+/* line 116, ../sass/_global.scss */
+.footer #footer-actions .action.phone p {
   color: #B9B9B9;
   font-family: "Helvetica Neue LT Std";
   font-size: 12px;
   font-weight: 500;
 }
-/* line 108, ../sass/_global.scss */
+/* line 126, ../sass/_global.scss */
+.footer #footer-actions .action p {
+  color: #B9B9B9;
+  font-family: "Georgia";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+/* line 136, ../sass/_global.scss */
+.footer #footer-shares {
+  text-align: center;
+}
+/* line 98, social_icons/*.png */
+.footer #footer-shares .social_icons-sprite, .footer #footer-shares .facebook a, .footer #footer-shares .facebook a:hover, .footer #footer-shares .vimeo a, .footer #footer-shares .vimeo a:hover, .footer #footer-shares .linkedin a, .footer #footer-shares .linkedin a:hover, .footer #footer-shares .youtube a, .footer #footer-shares .youtube a:hover {
+  background: url('../img/social_icons-s30271d8868.png') no-repeat;
+}
+/* line 4, ../sass/_social_icons.scss */
+.footer #footer-shares a {
+  display: block;
+  width: 29px;
+  height: 29px;
+}
+/* line 10, ../sass/_social_icons.scss */
+.footer #footer-shares .facebook a {
+  background-position: 0 -114px;
+}
+/* line 13, ../sass/_social_icons.scss */
+.footer #footer-shares .facebook a:hover {
+  background-position: 0 -143px;
+}
+/* line 20, ../sass/_social_icons.scss */
+.footer #footer-shares .vimeo a {
+  background-position: 0 -86px;
+}
+/* line 23, ../sass/_social_icons.scss */
+.footer #footer-shares .vimeo a:hover {
+  background-position: 0 -58px;
+}
+/* line 30, ../sass/_social_icons.scss */
+.footer #footer-shares .linkedin a {
+  background-position: 0 -172px;
+}
+/* line 33, ../sass/_social_icons.scss */
+.footer #footer-shares .linkedin a:hover {
+  background-position: 0 -201px;
+}
+/* line 40, ../sass/_social_icons.scss */
+.footer #footer-shares .youtube a {
+  background-position: 0 0;
+}
+/* line 43, ../sass/_social_icons.scss */
+.footer #footer-shares .youtube a:hover {
+  background-position: 0 -29px;
+}
+/* line 139, ../sass/_global.scss */
+.footer #footer-shares li {
+  display: inline-block;
+}
+/* line 145, ../sass/_global.scss */
 .footer .copyright {
   color: #525252;
   font-family: "Helvetica Neue LT Std";
   font-size: 10px;
+  padding: 60px 27px;
+}
+
+/* line 154, ../sass/_global.scss */
+.help-container {
+  padding-top: 71px;
+}
+/* line 159, ../sass/_global.scss */
+.help-container .left-column {
+  display: inline-block;
+  padding-left: 40px;
+}
+/* line 164, ../sass/_global.scss */
+.help-container .right-column {
+  display: inline-block;
+  padding-left: 75px;
+  vertical-align: top;
+  padding-top: 27px;
+}
+/* line 171, ../sass/_global.scss */
+.help-container h2 {
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+/* line 180, ../sass/_global.scss */
+.help-container p {
+  color: #737373;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 18px;
+  width: 568px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+/* line 190, ../sass/_global.scss */
+.help-container img {
+  max-width: 100%;
+}
+/* line 194, ../sass/_global.scss */
+.help-container .button {
+  width: 207px;
+  height: 27px;
+  border: 1px solid #102239;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 208, ../sass/_global.scss */
+.help-container a {
+  display: block;
+  width: 207px;
+  height: 27px;
+  border: 1px solid #102239;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 27px;
+  text-decoration: none;
+  margin-bottom: 21px;
+}
+/* line 227, ../sass/_global.scss */
+.help-container a:visited {
+  color: #001345;
 }

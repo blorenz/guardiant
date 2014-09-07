@@ -5,6 +5,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: #454545;
 }
 body * {
   box-sizing: border-box;
@@ -14,6 +15,9 @@ body * {
   width: $CONTENT_WIDTH;
   margin: 0 auto;
   position: relative;
+  // Style for Layer 0
+  background-color: #FFF;
+  @include box-shadow(0 0 101px rgba(0, 0, 0, 0.5));
 }
 
 .nav-header {
@@ -86,29 +90,142 @@ body * {
   width: $CONTENT_WIDTH;
   //height: 777px;
   background-color: #232323;
+  padding-top: 53px;
 
-  .action {
+  #footer-actions {
+    margin: 0 auto 40px;
+    text-align: center;
+    .action {
+      display: inline-block;
+      width: 140px;
+      text-align: center;
+      vertical-align: top;
+      margin-left: 90px;
+      &:first-child {
+        margin-left: 0px;
+      }
 
-    &.phone {
-      // Style for "1-432-563-LUBE"
-      color: #B9B9B9;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 12px;
-      font-weight: 500;
+      img {
+        display: block;
+        margin: 0 auto 21px;
+
+      }
+
+      &.phone {
+        // Style for "1-432-563-LUBE"
+        p {
+          color: #B9B9B9;
+          font-family: "Helvetica Neue LT Std";
+          font-size: 12px;
+          font-weight: 500;
+
+        }
+      }
+
+      // Style for "1200 “B” West "
+      p {
+        color: #B9B9B9;
+        font-family: "Georgia";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
     }
-
-    // Style for "1200 “B” West "
-    color: #B9B9B9;
-    font-family: "Georgia";
-    font-size: 12px;
-    font-weight: 400;
-
   }
+
+  #footer-shares {
+    @import "social_icons";
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+  }
+
 
   .copyright {
     // Style for "All trademark "
     color: #525252;
     font-family: "Helvetica Neue LT Std";
     font-size: 10px;
+    padding: 60px 27px;
+  }
+}
+
+.help-container {
+
+  padding-top: 71px;
+
+
+  .left-column {
+    display: inline-block;
+    padding-left: 40px;
+  }
+
+  .right-column {
+    display: inline-block;
+    padding-left: 75px;
+    vertical-align: top;
+    padding-top: 27px;
+  }
+
+  h2 {
+    // Style for "How can we hel"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+
+  p {
+    // Base style
+    color: #737373;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+    width: 568px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .button {
+    // Style for Rounded Rectangle 4
+    width: 207px;
+    height: 27px;
+    border: 1px solid #102239;
+    @include border-radius(8px);
+    // Style for "Contact us"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  a {
+    display: block;
+    // Style for Rounded Rectangle 4
+    width: 207px;
+    height: 27px;
+    border: 1px solid #102239;
+    @include border-radius(8px);
+
+    // Style for "Contact us"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 27px;
+    text-decoration: none;
+    margin-bottom: 21px;
+
+    &:visited {
+      color: #001345;
+    }
   }
 }
