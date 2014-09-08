@@ -189,6 +189,7 @@ body * {
 
   img {
     max-width: 100%;
+    display: block;
   }
 
   .button {
@@ -229,3 +230,14 @@ body * {
     }
   }
 }
+
+.bb3 {
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  border-bottom: 3px solid #004168;
+}
+
+
+@import "about_us";

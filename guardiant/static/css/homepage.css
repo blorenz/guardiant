@@ -341,10 +341,15 @@
   border-bottom: 2px solid #102239;
   padding-bottom: 10px;
 }
-/* line 234, ../sass/homepage.scss */
+/* line 232, ../sass/homepage.scss */
+.sections-container .section.active p {
+  display: inline;
+}
+/* line 237, ../sass/homepage.scss */
 .sections-container .section p {
   color: #FFF;
   font-family: "Helvetica Neue LT Std";
   font-size: 11px;
   width: 226px;
+  display: inline;
 }

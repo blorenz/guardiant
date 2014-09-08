@@ -9,7 +9,8 @@
 {#                <img src="{% thumbnail image.src 960x536 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />#}
                         <span class="ibhelper"></span>
                         <span class="title">{{ image.title }}</span>
-{#            {{ image.extended_content|safe }}#}
+                <br/>
+            <p>{{ image.extended_content|safe }}</p>
             </li>
         {% endfor %}
 

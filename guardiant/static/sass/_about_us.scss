@@ -1,0 +1,106 @@
+.about-us-gauges {
+  padding-left: 40px;
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  h2 {
+    // Style for "Replacement Pa"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    // Style for "Guardiant keep"
+    color: #737373;
+    font-family: "Georgia";
+    font-size: 14px;
+    font-weight: 400;
+    width: 392px;
+    line-height: 24px;
+  }
+
+}
+
+.definition-with-quote {
+  background-color: #102239;
+  padding: 30px 0 30px 40px;
+
+  > li {
+    display: inline-block;
+
+  }
+  li {
+    width: 358px;
+//    padding-top: 20px;
+//    padding-bottom: 20px;
+  }
+  .definition {
+    // Base style
+    width: 358px;
+    margin-right: 71px;
+    vertical-align: top;
+
+    h2 {
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 500;
+
+    // Style for "TRAINING
+    color: #F0F0F0;
+    font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+  }
+
+    p {
+
+      font-size: 14px;
+      color: #ACACAC;
+      line-height: 28px;
+
+    }
+
+
+  }
+
+  .quote {
+    // Style for "“ We believe t"
+    color: #ACACAC;
+    font-family: "Georgia";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    border-left: 2px solid #004168;
+    padding-left: 40px;
+    line-height: 36px;
+
+
+    .whom {
+      // Style for "SCOTT ROYS"
+      color: #DADADA;
+      font-family: "Helvetica Neue LT Std";
+      font-size: 12px;
+      font-weight: 700;
+      border-top: 1px solid #004168;
+      border-bottom: 1px solid #004168;
+      padding: 10px 0;
+      margin-top: 40px;
+      width: auto;
+      display: inline;
+      text-transform: uppercase;
+      line-height: auto;
+    }
+  }
+}

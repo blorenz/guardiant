@@ -284,8 +284,9 @@ body * {
 /* line 190, ../sass/_global.scss */
 .help-container img {
   max-width: 100%;
+  display: block;
 }
-/* line 194, ../sass/_global.scss */
+/* line 195, ../sass/_global.scss */
 .help-container .button {
   width: 207px;
   height: 27px;
@@ -301,7 +302,7 @@ body * {
   font-weight: 500;
   text-transform: uppercase;
 }
-/* line 208, ../sass/_global.scss */
+/* line 209, ../sass/_global.scss */
 .help-container a {
   display: block;
   width: 207px;
@@ -322,7 +323,113 @@ body * {
   text-decoration: none;
   margin-bottom: 21px;
 }
-/* line 227, ../sass/_global.scss */
+/* line 228, ../sass/_global.scss */
 .help-container a:visited {
   color: #001345;
+}
+
+/* line 234, ../sass/_global.scss */
+.bb3 {
+  border-bottom: 3px solid #004168;
+}
+/* line 235, ../sass/_global.scss */
+.bb3 img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 1, ../sass/_about_us.scss */
+.about-us-gauges {
+  padding-left: 40px;
+}
+/* line 3, ../sass/_about_us.scss */
+.about-us-gauges > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+/* line 8, ../sass/_about_us.scss */
+.about-us-gauges > li img {
+  max-width: 100%;
+  display: block;
+}
+/* line 14, ../sass/_about_us.scss */
+.about-us-gauges h2 {
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+/* line 25, ../sass/_about_us.scss */
+.about-us-gauges p {
+  color: #737373;
+  font-family: "Georgia";
+  font-size: 14px;
+  font-weight: 400;
+  width: 392px;
+  line-height: 24px;
+}
+
+/* line 37, ../sass/_about_us.scss */
+.definition-with-quote {
+  background-color: #102239;
+  padding: 30px 0 30px 40px;
+}
+/* line 41, ../sass/_about_us.scss */
+.definition-with-quote > li {
+  display: inline-block;
+}
+/* line 45, ../sass/_about_us.scss */
+.definition-with-quote li {
+  width: 358px;
+}
+/* line 50, ../sass/_about_us.scss */
+.definition-with-quote .definition {
+  width: 358px;
+  margin-right: 71px;
+  vertical-align: top;
+}
+/* line 56, ../sass/_about_us.scss */
+.definition-with-quote .definition h2 {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: 500;
+  color: #F0F0F0;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+/* line 67, ../sass/_about_us.scss */
+.definition-with-quote .definition p {
+  font-size: 14px;
+  color: #ACACAC;
+  line-height: 28px;
+}
+/* line 78, ../sass/_about_us.scss */
+.definition-with-quote .quote {
+  color: #ACACAC;
+  font-family: "Georgia";
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  border-left: 2px solid #004168;
+  padding-left: 40px;
+  line-height: 36px;
+}
+/* line 90, ../sass/_about_us.scss */
+.definition-with-quote .quote .whom {
+  color: #DADADA;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 12px;
+  font-weight: 700;
+  border-top: 1px solid #004168;
+  border-bottom: 1px solid #004168;
+  padding: 10px 0;
+  margin-top: 40px;
+  width: auto;
+  display: inline;
+  text-transform: uppercase;
+  line-height: auto;
 }

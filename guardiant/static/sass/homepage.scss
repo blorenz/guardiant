@@ -229,6 +229,9 @@
           padding-bottom: 10px;
 
         }
+      p {
+        display: inline;
+      }
     }
 
     p {
@@ -237,7 +240,7 @@
       font-family: "Helvetica Neue LT Std";
       font-size: 11px;
       width: 226px;
-
+      display: inline;
     }
   }
 }
