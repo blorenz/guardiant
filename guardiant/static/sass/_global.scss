@@ -241,3 +241,63 @@ body * {
 
 
 @import "about_us";
+
+
+.two-up-light,
+.two-up-blue
+{
+  margin: 0px auto 0;
+  padding-left:  40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  display:block;
+  .column {
+    display: inline-block;
+    vertical-align: top;
+
+    width: ($CONTENT_WIDTH / 2) - $TWO_COLUMN_MARGIN - 5;
+    ul {
+      width: 80%;
+      line-height: 24px;
+      letter-spacing: .3px;
+      h2 {
+        // Style for "WHO WE ARE"
+        color: #001345;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      p {
+        // Style for "Guardiant Lubr"
+        color: #737373;
+        font-family: "Georgia";
+        font-size: 14px;
+        font-weight: 400;
+
+      }
+    }
+
+  }
+
+}
+
+.two-up-blue {
+  background-color: #102139;
+  .column {
+    ul {
+      h2, p {
+        color: #fff;
+      }
+
+      h2 {
+        line-height: 40px;
+      }
+      p {
+        line-height: 30px;
+      }
+    }
+  }
+}

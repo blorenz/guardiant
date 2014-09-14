@@ -26,7 +26,7 @@
 #homepage-slideshow #slideshow #slides.hovering i {
   display: block;
 }
-/* line 39, ../sass/_slideshow.scss */
+/* line 37, ../sass/_slideshow.scss */
 #homepage-slideshow #slideshow #slides.hovering i.fa-backward, #homepage-slideshow #slideshow #slides.hovering i.fa-forward, #homepage-slideshow #slideshow #slides.hovering i.fa-pause {
   position: absolute;
   z-index: 1000;
@@ -102,13 +102,12 @@
   position: absolute;
   left: 50%;
   top: 7px;
-  -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
   border-radius: 7px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #000;
   display: inline-block;

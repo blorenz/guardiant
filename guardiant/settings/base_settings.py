@@ -69,6 +69,10 @@ INSTALLED_APPS = (
     'djangocms_text_ckeditor',  # note this needs to be above the 'cms' entry
 
     'reversion',
+
+    'cmsplugin_contact',
+    'guardiant_plugins.cmsplugin_custom_contact',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,8 +112,8 @@ TEMPLATE_DIRS = (
 
 CMS_TEMPLATES = (
     ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
     ('homepage.html', 'Homepage'),
+    ('products.html', 'Products'),
 )
 
 LANGUAGES = [

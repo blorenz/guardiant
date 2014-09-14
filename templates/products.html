@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/products.css"/>
+{% endblock %}
+
+{% block base_content %}
+    {% placeholder general %}
+
+    <div id="products">
+        {% placeholder products %}
+    </div>
+
+{% endblock %}
