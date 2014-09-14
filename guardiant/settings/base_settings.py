@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'reversion',
 
     'cmsplugin_contact',
+    'guardiant_plugins.cmsplugin_search',
     'guardiant_plugins.cmsplugin_custom_contact',
 
 )
