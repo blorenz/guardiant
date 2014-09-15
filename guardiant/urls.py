@@ -23,7 +23,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                             url(r'^admin/', include(admin.site.urls)),
+                            url(r'^pf/', include('product_finder.urls')),
                             url(r'^', include('cms.urls')),
+
                             )
 
 if settings.DEBUG:

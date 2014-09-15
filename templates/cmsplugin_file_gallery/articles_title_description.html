@@ -1,0 +1,17 @@
+{% load thumbnail %}
+{% load braner_utils %}
+
+
+
+{% for file in files %}
+    <li class="article {% cycle "first" "second" "third" %}" data-order="{{ forloop.counter }}">
+        <a href="{{ file.downloadable_file.url }}" target="_blank">
+            <span class="title">{{ file.title }}</span><br/>
+            <span class="subtitle">{{ file.subtitle }}</span><br/>
+            <span class="subtitle">Author: {{ file.author }}</span><br/><br/>
+            <span class="extended_content">{{ file.extended_content }}</span>
+        </a>
+    </li>
+{% endfor %}
+
+

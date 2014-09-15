@@ -55,6 +55,7 @@ INSTALLED_APPS = (
     'guardiant',
     'tinymce',
     'cmsplugin_gallery',
+    'cmsplugin_file_gallery',
     'inline_ordering',
     'easy_thumbnails',
 
@@ -73,6 +74,11 @@ INSTALLED_APPS = (
     'cmsplugin_contact',
     'guardiant_plugins.cmsplugin_search',
     'guardiant_plugins.cmsplugin_custom_contact',
+
+    'product_finder',
+    'rest_framework',
+
+    'autoslug',
 
 )
 

@@ -1,0 +1,19 @@
+{% load thumbnail %}
+{% load braner_utils %}
+
+
+
+{% for file in files %}
+    <li class="product {% cycle "first" "second" "third" %}" data-order="{{ forloop.counter }}">
+        <a href="{{ file.downloadable_file.url }}" target="_blank">
+            <div class="img-wrapper">
+                <img src="{% thumbnail file.src 240x240 crop %}" alt="{{ file.alt }}" title="{{ file.title }}"  />
+                <div class="hover-title">Learn More</div>
+                <div class="hover-bg"></div>
+            </div>
+
+            <span class="title bold">{{ file.title }}</span><br/>
+            <span class="title">{{ file.extended_content }}</span>
+        </a>
+    </li>
+{% endfor %}
