@@ -210,9 +210,60 @@
       vertical-align: bottom;
 //      padding-bottom: 30px;
 //      padding-left: 43px;
-      float: left;
 
 
+
+
+      &:hover {
+        //    @include transform(translate(0, -50%));
+        // make the background blue
+        @include transition (background 0.2s ease-in-out);
+        background: transparentize(#004167, .7);
+
+
+      }
+
+      .section-outer-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+      }
+
+      .section-inner-wrapper {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 0px 40px 20px;
+        overflow: hidden;
+
+
+        .extended-content-wrapper {
+          position: relative;
+          top: 150px;
+          height: 80px;
+          margin-top: 10px;
+        }
+      }
+
+      &:hover > .section-outer-wrapper {
+
+        @include transition (background 0.2s ease-in-out);
+        background: transparentize(#004167, .7);
+
+        span.title {
+          @include transition (border 0.2s ease-in-out);
+          border-bottom: 2px solid #102239;
+
+          @include transition (top 0.4s ease-in-out);
+          top: 0px;
+        }
+
+        .section-inner-wrapper {
+          .extended-content-wrapper {
+            @include transition (all 0.6s ease-in-out);
+            top: 0px;
+          }
+        }
+      }
 
       span.title {
         border-bottom: 2px solid #004168;
@@ -221,6 +272,9 @@
         font-family: "Georgia";
         font-size: 24px;
         font-weight: 400;
+        top: 70px;
+        left: 0px;
+        position: relative;
 
 
       }
@@ -232,7 +286,6 @@
 
         }
         p {
-          display: inline;
         }
       }
 
@@ -273,7 +326,12 @@ $base-line-height: 40px;
   }
 
   .hover-tile-container:hover > .hover-tile {
-    @include transform(translate(0, -100%));
+//    @include transform(translate(0, -50%));
+    // make the background blue
+    @include transition (background 0.2s ease-in-out);
+    background: transparentize(#004167, .7);
+
+
   }
 
   .hover-tile {
@@ -281,24 +339,18 @@ $base-line-height: 40px;
     background:inherit;
     color: white;
     height:inherit;
-    padding: 1em 1.5em;
+//    padding: 1em 1.5em;
   }
 
   .hover-tile-visible {
-    color: transparentize(white, .3);
-    font-size: 2em;
-    font-weight: 200;
-    padding-top: 1.5em;
-    text-align: center;
+//    color: transparentize(white, .3);
   }
 
   .hover-tile-hidden {
-    background: transparentize(black, .5);
-    h4 {
-      margin-bottom: .5em;
-    }
+    background: transparentize(#004167, .7);
     p {
-      color: transparentize(white, .3);
+//      color: transparentize(white, .3);
+      color: #FFF;
     }
   }
 }
