@@ -5,12 +5,24 @@
 
     <ul id="grid-choices">
         {% for image in images %}
-            <li class="section" data-order="{{ forloop.counter }}">
+{#            <li class="section" data-order="{{ forloop.counter }}">#}
 {#                <img src="{% thumbnail image.src 960x536 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />#}
-                        <span class="ibhelper"></span>
-                        <span class="title">{{ image.title }}</span>
-                <br/>
-            <p>{{ image.extended_content|safe }}</p>
+{#                        <span class="ibhelper"></span>#}
+{#                        <span class="title">{{ image.title }}</span>#}
+{#                <br/>#}
+{#            #}
+{#            </li>#}
+
+            <li class="section hover-tile-outer" style="background: url({% thumbnail image.src 320x190 crop %}); background-position: bottom;background-size: cover;">
+                <div class="hover-tile-container">
+                    <div class="hover-tile hover-tile-visible">
+                        Hover
+                    </div>
+                    <div class="hover-tile hover-tile-hidden">
+                        <h4>Hidden Copy</h4>
+                        <p>{{ image.extended_content|safe }}</p>
+                    </div>
+                </div>
             </li>
         {% endfor %}
 

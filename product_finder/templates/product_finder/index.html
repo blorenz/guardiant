@@ -1,9 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>dsfsdfds
-</body>
-</html>
+{% extends 'product_finder/base.html' %}
+{% load staticfiles %}
+{% block body %}
+    ng-app="productFinder"
+{% endblock %}
+{% block header %}
+    Polls
+{% endblock %}
+
+{% block content %}
+    <div ui-view></div>
+
+    <script type="text/ng-template" id="categoryList">
+        <ul>
+            <li ng-repeat="category in categories">
+                    [[category.title]]
+            </li>
+        </ul>
+    </script>
+
+
+    <script type="text/ng-template" id="productsList">
+        <ul>
+            <li ng-repeat="product in products">
+                    [[product.name]]
+            </li>
+        </ul>
+    </script>
+
+
+    <script type="text/ng-template" id="productDetail">
+        <div>
+            <h2>[[product.name]]</h2>
+        </div><br>
+        <a ui-sref="questionList"> << Back to list</a>
+    </script>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ STATIC_URL }}js/angular/angular.min.js"></script>
+    <script src="{% static "js/angular/angular-route.min.js" %}"></script>
+    <script src="{% static "js/angular/angular-resource.min.js" %}"></script>
+    <script src="{{ STATIC_URL}}product_finder/js/app.js"></script>
+    <script src="{{ STATIC_URL}}product_finder/js/controllers.js"></script>
+    <script src="{{ STATIC_URL}}product_finder/js/services.js"></script>
+{% endblock %}

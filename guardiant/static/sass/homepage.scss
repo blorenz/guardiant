@@ -3,10 +3,13 @@
 @import "compass/css3/opacity";
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
+@import "bourbon/bourbon";
+@import "neat/neat";
 
 .slideshow {
 
   width: $CONTENT_WIDTH;
+
 
   .slide {
     position: relative;
@@ -188,27 +191,26 @@
     display: inline-block;
 }
 
-.sections-container {
 
   #grid-choices {
     display: inline-block;
     background-color: #102239;
-  }
-  .section {
 
-    // Style for "Spare Parts"
-    color: #FFF;
-    font-family: "Georgia";
-    font-size: 24px;
-    font-weight: 400;
-    background-color: #191919;
-    display: inline-block;
-    width: 320px;
-    height: 179px;
-    vertical-align: bottom;
-    padding-bottom: 30px;
-    padding-left: 43px;
-    float: left;
+    .section {
+
+      // Style for "Spare Parts"
+      color: #FFF;
+      font-family: "Georgia";
+      font-size: 24px;
+      font-weight: 400;
+      background-color: #191919;
+      display: inline-block;
+      width: 320px;
+      height: 179px;
+      vertical-align: bottom;
+//      padding-bottom: 30px;
+//      padding-left: 43px;
+      float: left;
 
 
 
@@ -223,25 +225,80 @@
 
       }
 
-    &.active {
+      &.active {
         span.title {
           border-bottom: 2px solid #102239;
           padding-bottom: 10px;
 
         }
+        p {
+          display: inline;
+        }
+      }
+
       p {
+        // Style for "Phasellus maur"
+        color: #FFF;
+        font-family: "Helvetica Neue LT Std";
+        font-size: 11px;
+        width: 226px;
         display: inline;
       }
     }
 
+  }
+
+$base-accent-color: #FF0000;
+$base-border-color: #004168;
+$base-line-height: 40px;
+
+.hover-tile-outer {
+  $hover-tile-height: 179px;
+
+  background-position: bottom;
+  background-size: cover;
+  background-color: $base-accent-color;
+  border: 1px solid $base-border-color;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+
+//  @include media($medium-screen) {
+//    width: 40%;
+//  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .2s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;
+    padding-top: 1.5em;
+    text-align: center;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
     p {
-      // Style for "Phasellus maur"
-      color: #FFF;
-      font-family: "Helvetica Neue LT Std";
-      font-size: 11px;
-      width: 226px;
-      display: inline;
+      color: transparentize(white, .3);
     }
   }
 }
-

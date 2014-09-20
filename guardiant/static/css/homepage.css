@@ -154,15 +154,22 @@
   bottom: 0px;
 }
 
-/* line 7, ../sass/homepage.scss */
+/* line 2, ../sass/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/homepage.scss */
 .slideshow {
   width: 960px;
 }
-/* line 11, ../sass/homepage.scss */
+/* line 14, ../sass/homepage.scss */
 .slideshow .slide {
   position: relative;
 }
-/* line 13, ../sass/homepage.scss */
+/* line 16, ../sass/homepage.scss */
 .slideshow .slide .caption {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -175,21 +182,21 @@
   left: 30px;
   padding: 20px;
 }
-/* line 25, ../sass/homepage.scss */
+/* line 28, ../sass/homepage.scss */
 .slideshow .slide .caption h3 {
   color: #E9E9E9;
   font-family: "Helvetica Neue LT Std";
   font-size: 27px;
   font-weight: 700;
 }
-/* line 34, ../sass/homepage.scss */
+/* line 37, ../sass/homepage.scss */
 .slideshow .slide .caption h4 {
   color: #E9E9E9;
   font-family: "Helvetica Neue LT Std";
   font-size: 18px;
   font-style: italic;
 }
-/* line 42, ../sass/homepage.scss */
+/* line 45, ../sass/homepage.scss */
 .slideshow .slide .caption p {
   color: #E9E9E9;
   font-family: "Georgia";
@@ -197,26 +204,26 @@
   font-weight: 400;
 }
 
-/* line 54, ../sass/homepage.scss */
+/* line 57, ../sass/homepage.scss */
 .two-column {
   margin: 0px auto 0;
   padding-left: 40px;
   padding-bottom: 40px;
   padding-top: 40px;
 }
-/* line 59, ../sass/homepage.scss */
+/* line 62, ../sass/homepage.scss */
 .two-column .column {
   display: inline-block;
   vertical-align: top;
   width: 455px;
 }
-/* line 64, ../sass/homepage.scss */
+/* line 67, ../sass/homepage.scss */
 .two-column .column ul {
   width: 80%;
   line-height: 24px;
   letter-spacing: .3px;
 }
-/* line 68, ../sass/homepage.scss */
+/* line 71, ../sass/homepage.scss */
 .two-column .column ul h2 {
   color: #001345;
   font-family: "Helvetica Neue LT Std";
@@ -224,7 +231,7 @@
   font-weight: 700;
   margin-bottom: 10px;
 }
-/* line 77, ../sass/homepage.scss */
+/* line 80, ../sass/homepage.scss */
 .two-column .column ul p {
   color: #737373;
   font-family: "Georgia";
@@ -232,21 +239,21 @@
   font-weight: 400;
 }
 
-/* line 90, ../sass/homepage.scss */
+/* line 93, ../sass/homepage.scss */
 .quote-container {
   position: relative;
 }
-/* line 94, ../sass/homepage.scss */
+/* line 97, ../sass/homepage.scss */
 .quote-container .slide {
   height: 388px;
 }
-/* line 97, ../sass/homepage.scss */
+/* line 100, ../sass/homepage.scss */
 .quote-container .caption {
   position: absolute;
   top: 80px;
   left: 30px;
 }
-/* line 101, ../sass/homepage.scss */
+/* line 104, ../sass/homepage.scss */
 .quote-container .caption p {
   color: #737373;
   font-family: "Georgia";
@@ -255,7 +262,7 @@
   line-height: 36px;
   width: 547px;
 }
-/* line 111, ../sass/homepage.scss */
+/* line 114, ../sass/homepage.scss */
 .quote-container .caption h5 {
   color: #4A4A4A;
   font-family: "Helvetica Neue LT Std";
@@ -265,7 +272,7 @@
   margin-top: 50px;
 }
 
-/* line 126, ../sass/homepage.scss */
+/* line 129, ../sass/homepage.scss */
 .creto-container {
   background-color: #102239;
   color: #ffffff;
@@ -273,12 +280,12 @@
   border-top: 3px solid  #004168;
   border-bottom: 3px solid  #004168;
 }
-/* line 133, ../sass/homepage.scss */
+/* line 136, ../sass/homepage.scss */
 .creto-container li {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 138, ../sass/homepage.scss */
+/* line 141, ../sass/homepage.scss */
 .creto-container li.title {
   color: #FFF;
   font-family: "Helvetica Neue LT Std";
@@ -288,7 +295,7 @@
   text-align: center;
   vertical-align: middle;
 }
-/* line 164, ../sass/homepage.scss */
+/* line 167, ../sass/homepage.scss */
 .creto-container li.meaning {
   color: #FFF;
   font-family: "Georgia";
@@ -300,19 +307,19 @@
   border-left: 1px solid #004168;
 }
 
-/* line 186, ../sass/homepage.scss */
+/* line 189, ../sass/homepage.scss */
 .ibhelper {
   height: 100%;
   display: inline-block;
 }
 
-/* line 193, ../sass/homepage.scss */
-.sections-container #grid-choices {
+/* line 195, ../sass/homepage.scss */
+#grid-choices {
   display: inline-block;
   background-color: #102239;
 }
-/* line 197, ../sass/homepage.scss */
-.sections-container .section {
+/* line 199, ../sass/homepage.scss */
+#grid-choices .section {
   color: #FFF;
   font-family: "Georgia";
   font-size: 24px;
@@ -322,12 +329,10 @@
   width: 320px;
   height: 179px;
   vertical-align: bottom;
-  padding-bottom: 30px;
-  padding-left: 43px;
   float: left;
 }
-/* line 215, ../sass/homepage.scss */
-.sections-container .section span.title {
+/* line 217, ../sass/homepage.scss */
+#grid-choices .section span.title {
   border-bottom: 2px solid #004168;
   padding-bottom: 5px;
   color: #FFF;
@@ -335,20 +340,74 @@
   font-size: 24px;
   font-weight: 400;
 }
-/* line 227, ../sass/homepage.scss */
-.sections-container .section.active span.title {
+/* line 229, ../sass/homepage.scss */
+#grid-choices .section.active span.title {
   border-bottom: 2px solid #102239;
   padding-bottom: 10px;
 }
-/* line 232, ../sass/homepage.scss */
-.sections-container .section.active p {
+/* line 234, ../sass/homepage.scss */
+#grid-choices .section.active p {
   display: inline;
 }
-/* line 237, ../sass/homepage.scss */
-.sections-container .section p {
+/* line 239, ../sass/homepage.scss */
+#grid-choices .section p {
   color: #FFF;
   font-family: "Helvetica Neue LT Std";
   font-size: 11px;
   width: 226px;
   display: inline;
+}
+
+/* line 255, ../sass/homepage.scss */
+.hover-tile-outer {
+  background-position: bottom;
+  background-size: cover;
+  background-color: #FF0000;
+  border: 1px solid #004168;
+  height: 179px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+/* line 270, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-container {
+  height: 179px;
+  overflow: hidden;
+}
+/* line 275, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+/* line 279, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile {
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  background: inherit;
+  color: white;
+  height: inherit;
+  padding: 1em 1.5em;
+}
+/* line 287, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-visible {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2em;
+  font-weight: 200;
+  padding-top: 1.5em;
+  text-align: center;
+}
+/* line 295, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 297, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin-bottom: .5em;
+}
+/* line 300, ../sass/homepage.scss */
+.hover-tile-outer .hover-tile-hidden p {
+  color: rgba(255, 255, 255, 0.7);
 }
