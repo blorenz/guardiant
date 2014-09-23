@@ -5,20 +5,9 @@
 
     <ul id="grid-choices">
         {% for image in images %}
-            <li class="section" data-order="{{ forloop.counter }}" style="background: url({% thumbnail image.src 320x190 crop %}); background-position: bottom;background-size: cover;">
-{#                <img src="{% thumbnail image.src 960x536 crop %}" alt="{{ image.alt }}" title="{{ image.title }}"  rel="#cmspluginGalleryImage{{ image.pk }}" />#}
-                <div class="section-outer-wrapper">
-                    <div class="section-inner-wrapper">
-                        <span class="title">{{ image.title }}</span>
+            <li class="section" data-order="{{ forloop.counter }}" style="background: url({% thumbnail image.src 320x190 crop %}); background-position: bottom;background-size: cover;"><div class="section-outer-wrapper"> <div class="section-inner-wrapper"><span class="title">{{ image.title }}</span> <div class="extended-content-wrapper"> <p>{{ image.extended_content|safe }}</p> </div> </div> </div>
 
-                        <div class="extended-content-wrapper">
-                            <p>{{ image.extended_content|safe }}</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-{#            <li class="section hover-tile-outer" style="background: url({% thumbnail image.src 320x190 crop %}); background-position: bottom;background-size: cover;">#}
+            {#            <li class="section hover-tile-outer" style="background: url({% thumbnail image.src 320x190 crop %}); background-position: bottom;background-size: cover;">#}
 {#                <div class="hover-tile-container">#}
 {#                    <div class="hover-tile hover-tile-visible">#}
 {#                        <span class="title">{{ image.title }}</span>#}

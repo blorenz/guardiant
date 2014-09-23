@@ -97,11 +97,11 @@
 }
 /* line 117, ../sass/_slideshow.scss */
 .slideshow-nav .lozenge {
-  margin: 0 auto;
-  height: 14px;
-  position: absolute;
-  left: 50%;
-  top: 7px;
+  position: relative;
+  z-index: 3;
+}
+/* line 122, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-background {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -113,38 +113,63 @@
   display: inline-block;
   padding: 0 2px;
   z-index: 3000;
-}
-/* line 131, ../sass/_slideshow.scss */
-.slideshow-nav .lozenge li {
-  float: left;
-}
-/* line 134, ../sass/_slideshow.scss */
-.slideshow-nav .lozenge a {
-  float: left;
-  background: url('../img/grey-dot.png') no-repeat;
-  width: 7px;
-  height: 7px;
-  margin: 3px 2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 /* line 141, ../sass/_slideshow.scss */
-.slideshow-nav .lozenge a.active {
-  background: url('../img/green-dot.png') no-repeat;
+.slideshow-nav .lozenge-wrapper {
+  margin: 0 auto;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  top: 7px;
+}
+/* line 150, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-wrapper li {
+  display: inline-block;
+}
+/* line 154, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-wrapper li:first-child a {
+  margin-left: 5px;
+}
+/* line 159, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-wrapper a {
+  display: block;
+  background: url('../img/circle-light-grey.png?1411512746') no-repeat;
+  width: 8px;
+  height: 7px;
+  margin: 3px 5px 3px 0px;
+}
+/* line 166, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-wrapper a * {
+  visibility: hidden;
+}
+/* line 169, ../sass/_slideshow.scss */
+.slideshow-nav .lozenge-wrapper a.active {
+  background: url('../img/circle-dark-blue.png?1411512760') no-repeat;
 }
 
-/* line 152, ../sass/_slideshow.scss */
+/* line 180, ../sass/_slideshow.scss */
 #product-features #slideshow-wrapper {
   width: 790px;
   margin: 30px auto;
   border: 1px solid #c6cbd0;
   padding: 5px;
 }
-/* line 158, ../sass/_slideshow.scss */
+/* line 186, ../sass/_slideshow.scss */
 #product-features #slideshow-wrapper #slideshow {
   width: 790px;
   height: 391px;
   position: relative;
 }
-/* line 166, ../sass/_slideshow.scss */
+/* line 194, ../sass/_slideshow.scss */
 #product-features #slideshow-wrapper #slideshow .slide {
   position: absolute;
   z-index: 1;
@@ -152,6 +177,12 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
+}
+
+/* line 209, ../sass/_slideshow.scss */
+.bx-wrapper .bx-viewport {
+  border: none;
+  box-shadow: none;
 }
 
 /* line 2, ../sass/neat/grid/_grid.scss */

@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'tinymce',
     'cmsplugin_gallery',
     'cmsplugin_file_gallery',
+    # 'cmsplugin_image_gallery',
     'inline_ordering',
     'easy_thumbnails',
 
@@ -73,7 +74,7 @@ INSTALLED_APPS = (
 
     'cmsplugin_contact',
     'guardiant_plugins.cmsplugin_search',
-    'guardiant_plugins.cmsplugin_custom_contact',
+    # 'guardiant_plugins.cmsplugin_guardiant_contact',
 
     'product_finder',
     'rest_framework',
@@ -151,5 +152,8 @@ STATIC_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_PATH, "media")
 MEDIA_URL = "/media/"
 
+from django.utils.translation import ugettext_lazy as _
 
-
+CMSPLUGIN_CONTACT_FORMS = (
+    ('guardiant.forms.GuardiantContactForm', _('guardiant')),
+)

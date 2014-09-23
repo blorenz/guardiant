@@ -21,14 +21,20 @@ class CustomContactPlugin(ContactPlugin):
         (None, {
                 'fields': ('site_email',  'first_name', 'last_name',
                            # 'content_label', 'email_label',
+                           'form_name', 'form_layout',
                            'thanks',
                            'submit'),
         }),
+        (_('Redirection'),{
+            'fields': ('thanks', 'redirect_url' ),
+            }),
         (_('Spam Protection'), {
                 'fields': ('spam_protection_method', 'akismet_api_key',
                            'recaptcha_public_key', 'recaptcha_private_key',
                            'recaptcha_theme')
         })
     )
+
+
 
 plugin_pool.register_plugin(CustomContactPlugin)

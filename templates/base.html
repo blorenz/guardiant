@@ -1,12 +1,16 @@
-{% load cms_tags sekizai_tags menu_tags %}
+{% load cms_tags sekizai_tags menu_tags staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>{% page_attribute "page_title" %}</title>
 
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.bxslider.css"/>
+    <script src="{% static "js/vendor/jquery.min.js" %}"></script>
+    <script src="{% static "js/vendor/jquery.bxslider.min.js" %}"></script>
     {% render_block "css" %}
     {% block page_css %}{% endblock %}
+
 </head>
 <body>
 {% cms_toolbar %}

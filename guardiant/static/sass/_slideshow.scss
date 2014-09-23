@@ -115,12 +115,11 @@
   }
 
   .lozenge {
-    margin: 0 auto;
-    height: 14px;
-    position: absolute;
-    left: 50%;
-    top: 7px;
-    //@include opacity(.75); // layer alpha
+    position: relative;
+    z-index: 3;
+  }
+
+  .lozenge-background {
     @include border-radius(7px); // border radius
     @include background-clip(padding-box); // prevents bg color from leaking outside the border
     background-color: #000; // layer fill content
@@ -128,18 +127,47 @@
     padding: 0 2px;
     z-index:3000;
 
+    // Style for Rounded Rectangle 1
+    @include opacity(0.3);
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  .lozenge-wrapper {
+    margin: 0 auto;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    //@include opacity(.75); // layer alpha
+
+
     li {
-      float: left;
+      display: inline-block;
+
+      &:first-child {
+        a {
+          margin-left:5px;
+        }
+      }
     }
     a {
-      float: left;
-      background: image-url("grey-dot.png") no-repeat;
-      width: 7px;
-      height: 7px;
-      margin: 3px 2px;
+      display: block;
+      background: image-url("circle-light-grey.png") no-repeat;
+      width: image-width("circle-light-grey.png");
+      height: image-height("circle-light-grey.png");
+      margin: 3px 5px 3px 0px;
 
+      * {
+        visibility: hidden;
+      }
       &.active {
-        background: image-url("green-dot.png") no-repeat;
+        background: image-url("circle-dark-blue.png") no-repeat;
       }
     }
   }
@@ -175,4 +203,10 @@
 
     }
   }
+}
+
+
+.bx-wrapper .bx-viewport {
+  border: none;
+  box-shadow: none;
 }

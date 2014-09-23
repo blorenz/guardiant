@@ -305,3 +305,33 @@ body * {
     }
   }
 }
+
+
+.single-blue {
+
+  padding: 0 50px;
+  h2 {
+    // Style for "WHO WE ARE"
+    color: #001345;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 52px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    // Style for "A compressor l"
+    color: #727272;
+    font-family: "Georgia";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+
+    strong, b {
+      font-weight: bold;
+    }
+  }
+
+}
+
