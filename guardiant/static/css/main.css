@@ -520,3 +520,25 @@ body * {
 .single-blue p strong, .single-blue p b {
   font-weight: bold;
 }
+
+/* line 342, ../sass/_global.scss */
+.major-heading h2 {
+  color: #001345;
+  font-family: "Helvetica Neue LT Std";
+  font-size: 36px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+/* line 352, ../sass/_global.scss */
+.major-heading p {
+  color: #727272;
+  font-family: "Georgia";
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+}
+/* line 362, ../sass/_global.scss */
+.major-heading p b, .major-heading p strong {
+  font-weight: 700;
+}
